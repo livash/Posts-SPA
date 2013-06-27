@@ -1,4 +1,4 @@
-App.Views.PostsListView = Backbone.View.extend({
+App.Views.ContentView = Backbone.View.extend({
 	tagName: "div",
 	template: "",
 	events: {},
@@ -12,7 +12,7 @@ App.Views.PostsListView = Backbone.View.extend({
 
 	render: function(){
 		var that = this;
-		that.$el.addClass('sidebar');
+		that.$el.addClass('content');
 		var ul = $('<ul>');
 
 		var renderedContent = JST['posts/posts']({

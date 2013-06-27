@@ -15,9 +15,14 @@ App.Routers.MainRouter = Backbone.Router.extend({
 		var postListView = new App.Views.PostsListView({
 			collection: that.posts
 		});
+		var contentView = new App.Views.ContentView ({
+			collection: that.posts
+		});
 
+		that.$rootEl.html('');
+		that.$rootEl.append(postListView.render().$el);
+		that.$rootEl.append(contentView.render().$el);
 
-		that.$rootEl.html(postListView.render().$el);
 	},
 
 	show: function(id) {
